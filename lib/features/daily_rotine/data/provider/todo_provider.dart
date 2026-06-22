@@ -19,12 +19,7 @@ class TodoProvider extends GetConnect {
     ];
   }
 
-  Future<TodoModel> addTodo(int id) async {
+  Future<void> addTodo(String title) async {
     await Future.delayed(const Duration(seconds: 2));
-    return TodoModel(
-      id: id,
-      title: "This is the description of todo $id",
-      isCompleted: false,
-    );
   }
 }
